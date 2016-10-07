@@ -44,13 +44,10 @@ def process(raw):
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
-            entry['date'] = base
+            entry['date'] = base.replace(weeks=+(int(entry['week'])-1))
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
-
-        elif field == 'date':
-            entry['date'] = base.humanize()
 
         else:
             raise ValueError("Syntax error in line: {}".format(line))
