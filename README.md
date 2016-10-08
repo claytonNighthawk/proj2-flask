@@ -10,11 +10,10 @@ A starter project for using the Flask framework
 
 * Designed for Unix, mostly interoperable on Linux (Ubuntu) or MacOS.
   Target environment is Raspberry Pi. 
-  ** May also work on Windows (at least the W10 Ubuntu bash), but no promises.  A Linux virtual machine
-   should work, but will require manual configuration with `. env/bin/activate`, `make configure` and `pip install -r requirements.txt`.
-* If you are having trouble installing on MacOS or Linux try changing the PYVENV default command name in templates.d/Makefile.standard to pyvenv from virtualenv. I could not get "pyvenv" to install on my pi but virtualenv would install.    
+  ** May also work on Windows (at least the W10 Ubuntu bash) or a Linux virtual machine
+   out of the box depending on your pyvenv command name. Program might require manual configuration with `. env/bin/activate`, `make configure` and `pip install -r requirements.txt` or changing the PYVENV command name in templates.d/Makefile.standard to pyvenv from virtualenv. I could not get "pyvenv" to install on my pi or anywhere else but virtualenv worked.    
    
-* You will need Python version 3.4 or higher. 
+* You will also need Python version 3.4 or higher. 
 * Designed to work in "user mode" (unprivileged), therefore using a port 
   number above 1000 (rather than port 80 that a privileged web server would use)
 
