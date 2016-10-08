@@ -2,7 +2,7 @@
 A starter project for using the Flask framework
 
 ## Basics 
-* Enhances the class schedule .txt file
+* Enhances a class schedule .txt file
   * The starting date of each week should be displayed
   * As well as highlighting of the week. 
 
