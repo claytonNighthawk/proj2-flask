@@ -2,7 +2,7 @@
  * A simple style sheet for course schedules 
  *
  * Original : M Young, September 2015
- * Revised:  
+ * Revised  : Clayton Kilmer 2016 
  */
 
 body {
@@ -20,6 +20,10 @@ table .class-schedule: {
     padding: 3px;
 }
 
+tr.is_current_week {
+    background-color: rgb(136,157,252);
+}
+
 tr.odd {
     /* A little darker */
     background-color: rgb(216,202,160);
@@ -30,8 +34,9 @@ tr.even {
     background-color: rgb(224,213,179);
 }
 
-.class-schedule .week {
-    
+
+
+.class-schedule .week {   
     font-weight: bolder;
     font-size: 150%; 
     text-align: center; 

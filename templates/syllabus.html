@@ -15,8 +15,14 @@
   {% for entry in session.schedule %}
   {% if loop.index is divisibleby 2 %}
   <tr class="even">
+  {% if entry.is_current_week %}
+    <tr class="is_current_week"> 
+    {% endif %}
   {% else %}
   <tr class="odd">
+  {% if entry.is_current_week %}
+    <tr class="is_current_week"> 
+    {% endif %}
   {% endif %}
     <td class="week">{{ entry.week }}</td>
     <td class="date">{{ entry.date | fmtdate }}</td>
@@ -29,3 +35,6 @@
 
 
 </body> </html>
+
+
+
