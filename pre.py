@@ -46,6 +46,10 @@ def process(raw):
             entry['week'] = content
             this_week = base.replace(weeks=+(int(entry['week'])-1))
             entry['date'] = this_week.isoformat()
+            if arrow.now().week() == this_week.week(): 
+                entry['current_week'] = 'true'
+            else: 
+                entry['current_week'] = 'false'
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
